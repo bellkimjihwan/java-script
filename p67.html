@@ -1,17 +1,18 @@
 <html>
-    <head></head>
     <body>
-        <img id="image" src="1.jpg" width="120"height="100">
-          <script>
+        <img id="image" src="img/guitar1.jpg" width="120" height="100">
+        <script>
+            var imgsrc = 1;
             function changeImage() {
-                if (document.getElementById("image").src.includes("1.jpg")) {
-                document.getElementById("image").src = "3.jpg";
+                if(imgsrc == 2) {
+                    document.getElementById("image").src = "img/guitar1.jpg"
+                    imgsrc = 1;
+                }else{
+                    document.getElementById("image").src = "img/pudding1.jpg";
+                    imgsrc = 2;
+                }
             }
-            else {
-                document.getElementById("image").src = "1.jpg";
-            }
-        }
-          </script>
-          <input type="button" onclick="changeImage()"value="click!"/>
+        </script>
+        <input type="button" onclick="changeImage()" value="click!">
     </body>
 </html>
